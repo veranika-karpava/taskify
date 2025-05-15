@@ -1,0 +1,15 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.tasks {
+  &__navigation {
+    width: 100%;
+    margin-top: $space-md;
+    @include flex(center, center);
+  }
+
+  &__nav-buttons {
+    padding: 1.5 * $space-md;
+    @include flex(space-evenly, center);
+  }
+}

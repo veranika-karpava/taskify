@@ -1,0 +1,18 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.footer {
+  @include font-stack-sm($cool-gray);
+  text-align: center;
+
+  &__icon-wrapper {
+    margin: 0 $space-sm;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__icon {
+    @include size-icon(1.25, 1.25);
+  }
+}

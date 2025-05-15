@@ -1,0 +1,104 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.button {
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  &__count {
+    margin: $space-none $space-xs;
+  }
+
+  &.filled,
+  &.text,
+  &.delete,
+  &.round {
+    @include transition(transform 0.2s);
+    @include hover-scale;
+  }
+
+  // === Round Button: toggle mode, logout ===
+  &.round {
+    background: transparent;
+    border: 2px solid $neutral-white;
+    @include border-radius(50%);
+    @include flex(center, center);
+    padding: $space-sm;
+  }
+
+  &.icon-inside {
+    @include size-icon(1.5, 1.5);
+    color: $neutral-white;
+  }
+
+  // === Filled Button: login ===
+  &.filled {
+    background: $gradient-blue-purple;
+    @include border-radius($space-sm);
+    @include font-stack-main($neutral-white);
+    padding: 0.75 * $space-md 1 * $space-md;
+    width: 100%;
+  }
+
+  // === Text Button: toggle auth mode ===
+  &.text {
+    background-color: transparent;
+    @include font-stack-main($bright-blue);
+  }
+
+  // === Visibility Button ===
+  &.visible {
+    color: $cool-gray;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &.icon-visible {
+      @include size-icon(1.7, 1.7);
+    }
+  }
+
+  // === Update/Add Icon Button ===
+  &.update {
+    @include flex(center, center);
+    @include border-radius(50%);
+    @include size-icon(1.8, 1.8);
+    background: $gradient-blue-purple;
+    color: $neutral-white;
+
+    &.icon-update,
+    &.icon-add {
+      @include size-icon(1.5, 1.5);
+    }
+  }
+
+  // === Delete Button ===
+  &.delete {
+    background-color: transparent;
+    color: $cool-gray;
+
+    &.icon-cross {
+      @include size-icon(1.7, 1.7);
+    }
+  }
+
+  // === Filter Button ===
+  &.filter {
+    background-color: transparent;
+    @include font-stack-sm;
+    @include transition(color 0.3s, border-bottom 0.3s ease-in-out);
+
+    &.active {
+      border-bottom: 1px solid $bright-blue;
+      color: $bright-blue;
+    }
+
+    &:hover {
+      color: $bright-blue;
+    }
+  }
+}

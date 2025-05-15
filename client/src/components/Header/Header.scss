@@ -1,0 +1,66 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/theme' as *;
+
+.header {
+  @include style-bg-image-header;
+  @include flex(space-between, center, column);
+  background-image: var(--bg-image);
+
+  &__nav {
+    margin-left: auto;
+    @include flex(space-between, center, row);
+    gap: $space-md;
+  }
+
+  &__body {
+    @include flex(flex-start, center, row, wrap);
+    gap: $space-md;
+    margin: auto $space-none;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__heading {
+    @include font-stack-header;
+  }
+
+  &__quote {
+    position: relative;
+    background-color: var(--bg-surface);
+    opacity: 0.8;
+    border-left: $space-xs solid var(--quote-color);
+    padding: $space-sm;
+    @include border-radius;
+    @include font-stack-quote;
+    width: 100%;
+
+    @include tablet {
+      max-width: 37.5rem;
+    }
+
+    &::before {
+      content: open-quote;
+      font-size: 3rem;
+      line-height: 1;
+      position: absolute;
+      top: -10px;
+      left: -15px;
+      color: var(--quote-color);
+    }
+
+    &-text {
+      margin-bottom: $space-md;
+    }
+
+    &-author {
+      text-align: right;
+      font-size: 90%;
+      font-weight: $bold;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/theme' as *;
+
+.tasks {
+  &__item {
+    border-bottom: 1px solid var(--text-completed);
+    padding: $space-md;
+    position: relative;
+    width: 100%;
+    @include flex(space-between, center, column);
+  }
+
+  &__item-container {
+    width: 100%;
+    gap: $space-md;
+    @include flex(flex-start, center);
+
+    .delete {
+      margin-left: auto;
+    }
+  }
+
+  &__item-content {
+    max-width: 65%;
+    padding-top: 1.5%;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+
+    @include tablet {
+      max-width: 75%;
+    }
+
+    &.completed {
+      text-decoration: line-through;
+      color: var(--text-completed);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/theme' as *;
+
+.auth {
+  &__header {
+    text-align: center;
+    padding: $space-md;
+  }
+
+  &__form {
+    border-block: 1px solid var(--text-completed);
+  }
+
+  &__btn-container {
+    padding: $space-md;
+  }
+
+  &__footer {
+    padding: $space-md;
+
+    span {
+      margin-right: $space-sm;
+    }
+  }
+}

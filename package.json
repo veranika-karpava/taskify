@@ -1,0 +1,7 @@
+{
+  "name": "taskify",
+  "version": "1.1.0",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  }
+}

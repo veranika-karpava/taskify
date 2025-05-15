@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+$theme-light: (
+  bg-main: #eaeef9,
+  // background color for main
+  bg-surface: #fafafa,
+  // background color for card, list, input
+  bg-image: url('../../assets/images/bg-light.webp'),
+  quote-color: #d36db9,
+  text-main: #40415a,
+  // color for text in list, input, and main
+  text-muted: #999cb0,
+  text-completed: #d5d7e5, // color for completed list
+);
+
+$theme-dark: (
+  bg-main: #15161f,
+  // background color for main
+  bg-surface: #26283a,
+  // background color for card, list, input
+  bg-image: url('../../assets/images/bg-dark.webp'),
+  quote-color: #3c71dd,
+  text-main: #d9dcf6,
+  // color for text in list, input, and main
+  text-muted: #999cb0,
+  text-completed: #85879a, // color for completed list
+);
+
+body.light {
+  --bg-main: #{map.get($theme-light, bg-main)};
+  --bg-surface: #{map.get($theme-light, bg-surface)};
+  --bg-image: #{map.get($theme-light, bg-image)};
+  --quote-color: #{map.get($theme-light, quote-color)};
+  --text-main: #{map.get($theme-light, text-main)};
+  --text-muted: #{map.get($theme-light, text-muted)};
+  --text-completed: #{map.get($theme-light, text-completed)};
+}
+
+body.dark {
+  --bg-main: #{map.get($theme-dark, bg-main)};
+  --bg-surface: #{map.get($theme-dark, bg-surface)};
+  --bg-image: #{map.get($theme-dark, bg-image)};
+  --quote-color: #{map.get($theme-dark, quote-color)};
+  --text-main: #{map.get($theme-dark, text-main)};
+  --text-muted: #{map.get($theme-dark, text-muted)};
+  --text-completed: #{map.get($theme-dark, text-completed)};
+}

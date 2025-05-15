@@ -1,0 +1,14 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/theme' as *;
+
+.card {
+  width: 100%;
+  height: inherit;
+  @include border-radius;
+  background-color: var(--bg-surface);
+
+  @include tablet {
+    width: 50%;
+  }
+}

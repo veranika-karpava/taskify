@@ -1,0 +1,11 @@
+{
+    "eslint.useFlatConfig": true,
+    "cSpell.words": [
+        "cfbry",
+        "lhybrvz",
+        "postbuild",
+        "sess"
+    ],
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true
+}

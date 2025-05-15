@@ -1,0 +1,40 @@
+// === Breakpoints ===
+$desktop-breakpoint: 90rem; // 1440px - for large screens
+$tablet-breakpoint: 48rem; // 768px - for medium screens
+
+// === Font Path ===
+$font-path-bold: '../../assets/fonts/JosefinSans-Bold.woff2';
+$font-path-regular: '../../assets/fonts/JosefinSans-Regular.woff2';
+
+// === Font Size ===
+$font-size-lg: 1.75rem;
+$font-size-md: 1.25rem;
+$font-size-sm: 1.125rem;
+$font-size-xs: 0.8rem;
+
+// === Font Weight ===
+$bold: 700;
+$regular: 400;
+
+// === Padding, Margin, Gap ===
+$space-lg: 2rem;
+$space-md: 1rem;
+$space-sm: 0.5rem;
+$space-xs: 0.25rem;
+$space-none: 0;
+
+// === Gradient Color: button: login, signup, add, update status ===
+$gradient-blue-purple: linear-gradient(
+  to left,
+  #3b6cb7,
+  #d36db9
+); // Blue to purple gradient
+
+// === Error, AuthToggle button, Navigation ===
+$bright-blue: #3c71dd;
+// === Footer, visibility btn, delete btn ===
+$cool-gray: #85879a;
+// === Placeholder, action buttons, footer, message ===
+$lavender-gray: #999cb0;
+$neutral-white: #fafafa;
+$neutral-blue: #40415a;

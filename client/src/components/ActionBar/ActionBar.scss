@@ -1,0 +1,13 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.action-bar {
+  width: 100%;
+  @include flex(space-between, center);
+  padding: 1.5 * $space-md $space-md;
+
+  &__count {
+    @include font-stack-sm;
+  }
+}

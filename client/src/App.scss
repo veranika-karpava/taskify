@@ -1,0 +1,75 @@
+@use './styles/partials/typography' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
+
+*,
+*::before,
+*::after {
+  margin: $space-none;
+  padding: $space-none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include font-stack-main;
+  height: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  @include transition(all 0.2s ease);
+}
+
+header {
+  padding: $space-md;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  min-height: calc(60vh - 55px);
+  padding: $space-md;
+  @include flex(flex-start, center, column);
+  gap: $space-md;
+  flex: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea {
+  padding: 0;
+  margin: 0;
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+footer {
+  margin-top: auto;
+  padding: $space-md;
+}
+
+.app {
+  &__loading {
+    height: 100vh;
+  }
+}

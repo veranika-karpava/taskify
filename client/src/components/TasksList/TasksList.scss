@@ -1,0 +1,9 @@
+@use '../../styles/partials/theme' as *;
+
+.tasks {
+  &__list {
+    color: var(--text-main);
+    min-height: 11.375rem;
+    width: 100%;
+  }
+}
