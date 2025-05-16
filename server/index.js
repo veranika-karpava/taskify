@@ -34,19 +34,17 @@ app.use(express.json());
 // Middleware to handle cookies in incoming requests
 app.use(cookiesParser());
 
+// Serve React frontend
+app.use(express.static(path.join(__dirname, '../client/build')));
+
 // Register route handlers for different parts of the app
 app.use('/user', userRouter);
 app.use('/tasks', taskRouter);
 app.use('/quote', quoteRouter);
 
-// Serve static files (e.g., images, CSS, JavaScript) from the 'public' directory - for deploying
-app.use(express.static(path.join(__dirname, '../client/build')));
-
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
-
-console.log('Serving static from:', path.join(__dirname, '../client/build'));
 
 // Set default status code and message for errors
 app.use((error, _req, res, next) => {
