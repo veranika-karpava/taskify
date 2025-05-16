@@ -41,7 +41,7 @@ app.use('/quote', quoteRouter);
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 // Set default status code and message for errors
