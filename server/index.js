@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 
+const PORT = process.env.PORT || 5050;
+
 const userRouter = require('./middleware/userRouter');
 const taskRouter = require('./middleware/taskRouter');
 const quoteRouter = require('./middleware/quoteRouter');
@@ -45,6 +47,7 @@ app.get('*', (_req, res) => {
 });
 
 console.log('Serving static from:', path.join(__dirname, '../client/build'));
+
 // Set default status code and message for errors
 app.use((error, _req, res, next) => {
   if (res.headerSent) {
@@ -55,20 +58,14 @@ app.use((error, _req, res, next) => {
     .json({ message: error.message || 'An unknown error occurred' });
 });
 
-if (!process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_NAME) {
-  throw new Error(
-    'Missing required environment variables: DB_USER, DB_PASSWORD, DB_NAME',
-  );
-}
-
 // MongoDB connection setup
 mongoose
   .connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.lhybrvz.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
   )
   .then(() => {
-    app.listen(`${process.env.PORT || 5050}`, () => {
-      console.log(`🚀 Server listening on ${process.env.PORT}`);
+    app.listen(PORT, () => {
+      console.log(`🚀 Server listening on ${PORT}`);
     });
   })
   .catch((err) => {
