@@ -2,7 +2,6 @@
 # environment var
 **/.env
 **/.env.production
-**/README.md
 # dependencies
 **/node_modules
 /.pnp
