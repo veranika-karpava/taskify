@@ -44,6 +44,7 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
+console.log('Serving static from:', path.join(__dirname, '../client/build'));
 // Set default status code and message for errors
 app.use((error, _req, res, next) => {
   if (res.headerSent) {
