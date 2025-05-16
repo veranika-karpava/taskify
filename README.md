@@ -38,3 +38,5 @@ Taskfy is a fully responsive, full-stack web application designed to help users 
    * **`npm start`** - launch the app in your browser;
 
 # 🌐 Link to the demo
+ https://taskify-list-d586ef7731d7.herokuapp.com/
+ 
