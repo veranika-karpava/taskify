@@ -34,7 +34,7 @@ app.use(express.json());
 // Middleware to handle cookies in incoming requests
 app.use(cookiesParser());
 
-// Serve React frontend
+// Serve static files from the React app (for deployment)
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Register route handlers for different parts of the app
@@ -42,6 +42,8 @@ app.use('/user', userRouter);
 app.use('/tasks', taskRouter);
 app.use('/quote', quoteRouter);
 
+// The "catchall" handler: for any request that doesn't
+// Match one above, send back React's index.html file.
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });

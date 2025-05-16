@@ -10,7 +10,7 @@ Taskify is a fully responsive, full-stack web application designed to help users
 
 # 📂 Project Structure
 * `/`: entry point for login and registration;
-* `/tasks`: the main task dashboard with CRUD operations.
+* `/mytasks`: the main task dashboard with CRUD operations.
 
 # 🔧 Environment Variables
 * Set up the environment variables by configuring the client and server using `.env.sample` files provided in each directory.
