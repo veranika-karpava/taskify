@@ -1,5 +1,5 @@
 # 🌸 Taskify App - Personal Task List
-Taskfy is a fully responsive, full-stack web application designed to help users efficiently manage their tasks. The application supports CRUD operations, status-based filtering, theme toggling, and secure user authentication using JWT. It features a modern UI and is optimized for both desktop and mobile users.
+Taskify is a fully responsive, full-stack web application designed to help users efficiently manage their tasks. The application supports CRUD operations, status-based filtering, theme toggling, and secure user authentication using JWT. It features a modern UI and is optimized for both desktop and mobile users.
 
 # 🚀 Project Features:
 * Theme Toggle: switch between light and dark modes for enhancing accessibility and   reducing visual fatigue;
@@ -12,7 +12,7 @@ Taskfy is a fully responsive, full-stack web application designed to help users 
 * `/`: entry point for login and registration;
 * `/tasks`: the main task dashboard with CRUD operations.
 
-# 🔧 Enviroment Variables
+# 🔧 Environment Variables
 * Set up the environment variables by configuring the client and server using `.env.sample` files provided in each directory.
 
 # 🛠️ Tech Stack
@@ -39,4 +39,3 @@ Taskfy is a fully responsive, full-stack web application designed to help users 
 
 # 🌐 Link to the demo
  https://taskify-list-d586ef7731d7.herokuapp.com/
- 

@@ -39,14 +39,9 @@ app.use('/quote', quoteRouter);
 
 // Serve static files (e.g., images, CSS, JavaScript) from the 'public' directory - for deploying
 app.use(express.static(path.join(__dirname, '../client/build')));
+
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
-// Catch-all route for single-page applications (SPAs)
-// If no API routes match, serve the 'index.html' file from the 'public' directory
-app.use((_req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Set default status code and message for errors
