@@ -51,7 +51,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (isAuth) {
-      navigate('/tasks');
+      navigate('/mytasks');
     }
   }, [isAuth]);
 
@@ -91,7 +91,7 @@ const HomePage = () => {
         }).unwrap();
       }
       resetForm();
-      navigate('/tasks');
+      navigate('/mytasks');
     } catch (err) {
       setErrMessage(err.message);
     }
